@@ -18,6 +18,7 @@ var gulp = require('gulp'),
 
 
 
+
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
@@ -67,7 +68,7 @@ gulp.task('build:html',function(){
 gulp.task('build:js',function(){
 	gulp.src(path.src.js)
 		.pipe(plumber(catch_error))
-		.pipe(rigger())
+		.pipe(fileInclude())
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
@@ -78,6 +79,7 @@ gulp.task('build:js',function(){
 gulp.task('build:style',function(){
 	gulp.src(path.src.style)
 		.pipe(plumber(catch_error))
+		.pipe(fileInclude())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(prefixer())
@@ -112,3 +114,4 @@ gulp.task('webbrowser',function(){
 });
 
 gulp.task('default',['build','webbrowser','watch']);
+
