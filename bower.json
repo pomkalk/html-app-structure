@@ -1,0 +1,22 @@
+{
+  "name": "demo_project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "pomkalk <pomkalk@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery": "~2.2.0"
+  }
+}
